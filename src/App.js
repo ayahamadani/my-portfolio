@@ -13,11 +13,21 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route component={Home} exact path="/"></Route>
-        <Route component={About} path="/about"></Route>
-        <Route component={SinglePost} path="/post/:slug"></Route>
-        <Route component={Post} path="/post"></Route>
-        <Route component={Project} exact path="/project"></Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/post/:slug">
+          <SinglePost />
+        </Route>
+        <Route path="/post">
+          <Post />
+        </Route>
+        <Route exact path="/project">
+          <Project />
+        </Route>
       </Switch>
     </Router>
   );
